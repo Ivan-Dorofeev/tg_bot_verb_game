@@ -1,18 +1,9 @@
-import asyncio
-import logging
 import os
-
-import telegram
 from dotenv import load_dotenv
 from telegram import Update, ForceReply
-from telegram.ext import Updater, CommandHandler, MessageHandler, filters, CallbackContext, Application, ContextTypes
+from telegram.ext import Updater, CommandHandler, MessageHandler, filters, Application, ContextTypes
 
-# Enable logging
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=logging.INFO
-)
-
-logger = logging.getLogger(__name__)
+from detect_intent import detect_intent_texts
 
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
@@ -28,13 +19,17 @@ async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
 
 
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    await update.message.reply_text(update.message.text)
+    texts = update.message.text
+    project_id = 'axxel123-gtnf'
+    session_id = update.message.id
+    answer = detect_intent_texts(project_id, session_id, texts, 'ru')
+    await update.message.reply_text(answer)
 
 
 def main():
     load_dotenv()
     bot_token = os.environ['TG_BOT_TOKEN']
-    my_chat_id = os.environ['TG_MY_CHAT_ID']
+    axxel123_GTNF_API_KEY = os.environ['axxel123_GTNF_API_KEY']
 
     application = Application.builder().token(bot_token).build()
 
