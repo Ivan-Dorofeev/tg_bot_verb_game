@@ -29,7 +29,6 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 def main():
     load_dotenv()
     bot_token = os.environ['TG_BOT_TOKEN']
-    axxel123_GTNF_API_KEY = os.environ['axxel123_GTNF_API_KEY']
 
     application = Application.builder().token(bot_token).build()
 
