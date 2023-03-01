@@ -1,4 +1,4 @@
-# Бота для VK и Telegram
+# Бот для VK и Telegram
 
 ## Описание
 
