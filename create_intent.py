@@ -38,4 +38,4 @@ def main(file_path):
             create_intent('axxel123-gtnf', frize, frize_action['questions'], frize_action['answer'])
 
 
-main('frazes/test_frazes.json')
+# main('frazes/test_frazes.json')
