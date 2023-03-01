@@ -4,7 +4,7 @@
 
 Боту общается по заранее подготовленным фразам, который храним в своём аккаунте [Dialogflow](https://dialogflow.cloud.google.com/)
 
-**VK**  - [VKgroup](https://vk.com/im?media=&sel=-194790108)
+**VK**  - [VK Group](https://vk.com/im?media=&sel=-194790108)
 
 ![vk_gif](https://user-images.githubusercontent.com/58893102/222070436-49f7884e-103a-4a0b-b5e5-e9c2a1b997dd.gif)
 
