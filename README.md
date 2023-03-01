@@ -4,13 +4,14 @@
 
 Боту общается по заранее подготовленным фразам, который храним в своём аккаунте [Dialogflow](https://dialogflow.cloud.google.com/)
 
-VK 
-[image](https://github.com/Ivan-Dorofeev/tg_bot_verb_game/tree/main/gif/vk_gif.gif)
+**VK**  - [VKgroup](https://vk.com/im?media=&sel=-194790108)
+
+![vk_gif](https://user-images.githubusercontent.com/58893102/222070436-49f7884e-103a-4a0b-b5e5-e9c2a1b997dd.gif)
 
 
-Telegram
-[image](https://github.com/Ivan-Dorofeev/tg_bot_verb_game/tree/main/gif/tg_gif.gif)
+**Telegram** - [TG Bot](https://t.me/verb_game_bot)
 
+![tg_gif](https://user-images.githubusercontent.com/58893102/222070418-aae63936-bbc3-42fa-ba86-584a3de23b0f.gif)
 
 
 ## Установка
