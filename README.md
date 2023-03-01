@@ -5,11 +5,11 @@
 Боту общается по заранее подготовленным фразам, который храним в своём аккаунте [Dialogflow](https://dialogflow.cloud.google.com/)
 
 VK 
-[image](https://user-images.githubusercontent.com/58893102/222063889-91037c30-a6ec-46c1-a11a-4b544193f0c2.png)
+[image](https://github.com/Ivan-Dorofeev/tg_bot_verb_game/tree/main/gif/vk_gif.gif)
 
 
 Telegram
-[image](https://user-images.githubusercontent.com/58893102/222063820-0d9faac8-665a-4cd4-966b-03625f8c6eb6.png)
+[image](https://github.com/Ivan-Dorofeev/tg_bot_verb_game/tree/main/gif/tg_gif.gif)
 
 
 
