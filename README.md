@@ -47,6 +47,16 @@
 
 ![image](https://user-images.githubusercontent.com/58893102/222640855-9c57e7d4-f3ed-4ebb-ab66-1c98a0a61c57.png)
 
+Либо воспользоваться уже заготовленным модулем для это **create_intent.py**:
+
+- положите ваши заготовленные фразы файл: phrases/phrases.json
+        ![image](https://user-images.githubusercontent.com/58893102/222748962-c8f3fdd1-dce5-44e7-9383-78b296069b60.png)
+
+
+- запуститу скрипт командой: 
+
+        ```python create_intent.py```
+ 
 
 ## Запуск
 
