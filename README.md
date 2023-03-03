@@ -32,6 +32,22 @@
     
     ```DIALOGFLOW_PROJECT_ID``` - id своего проекта в [Dialogflow](https://dialogflow.cloud.google.com/)
 
+## Развитие бота
+
+Чтобы бот определял необходимые фразы и правильно отвечал, настройте это в [Dialogflow](https://dialogflow.cloud.google.com/):
+
+- нажмите CREATE UNTENT
+![image](https://user-images.githubusercontent.com/58893102/222640446-f944455d-95c2-4614-9f50-dc76a01d9386.png)
+
+- пропишите фразы для отлова (Training phrases)
+
+- пропишите ответ (Responses)
+
+Получится примерно так:
+
+![image](https://user-images.githubusercontent.com/58893102/222640855-9c57e7d4-f3ed-4ebb-ab66-1c98a0a61c57.png)
+
+
 ## Запуск
 
 Запустите телеграмм-бота командой:
