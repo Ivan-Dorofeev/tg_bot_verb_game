@@ -13,18 +13,14 @@ from tg_log_sender import TelegramLogsHandler
 logger = logging.getLogger("tg_bot_logger")
 
 
-async def start(update: Update) -> None:
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.effective_user
     await update.message.reply_html(
         rf"Здравствуй, {user.mention_html()}!",
     )
 
 
-async def help_command(update: Update) -> None:
-    await update.message.reply_text("Сам себе Help!")
-
-
-async def echo_text_from_users(update: Update) -> None:
+async def echo_text_from_users(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     texts = update.message.text
     session_id = update.message.id
     print('texts = ', texts)
@@ -51,7 +47,6 @@ def main(bot_token, my_tg_chat_id):
             application = Application.builder().token(bot_token).build()
 
             application.add_handler(CommandHandler("start", start))
-            application.add_handler(CommandHandler("help", help_command))
             application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo_text_from_users))
 
             application.run_polling()
