@@ -4,13 +4,14 @@
 
 Боту общается по заранее подготовленным фразам, который храним в своём аккаунте [Dialogflow](https://dialogflow.cloud.google.com/)
 
-VK 
-[image](https://user-images.githubusercontent.com/58893102/222063889-91037c30-a6ec-46c1-a11a-4b544193f0c2.png)
+**VK**  - [VK Group](https://vk.com/im?media=&sel=-194790108)
+
+![vk_gif](https://user-images.githubusercontent.com/58893102/222070436-49f7884e-103a-4a0b-b5e5-e9c2a1b997dd.gif)
 
 
-Telegram
-[image](https://user-images.githubusercontent.com/58893102/222063820-0d9faac8-665a-4cd4-966b-03625f8c6eb6.png)
+**Telegram** - [TG Bot](https://t.me/verb_game_bot)
 
+![tg_gif](https://user-images.githubusercontent.com/58893102/222070418-aae63936-bbc3-42fa-ba86-584a3de23b0f.gif)
 
 
 ## Установка
@@ -30,6 +31,22 @@ Telegram
     ```VK_API_GROUP_TOKEN``` - токен VK группы
     
     ```DIALOGFLOW_PROJECT_ID``` - id своего проекта в [Dialogflow](https://dialogflow.cloud.google.com/)
+
+## Развитие бота
+
+Чтобы бот определял необходимые фразы и правильно отвечал, настройте это в [Dialogflow](https://dialogflow.cloud.google.com/):
+
+- нажмите CREATE UNTENT
+![image](https://user-images.githubusercontent.com/58893102/222640446-f944455d-95c2-4614-9f50-dc76a01d9386.png)
+
+- пропишите фразы для отлова (Training phrases)
+
+- пропишите ответ (Responses)
+
+Получится примерно так:
+
+![image](https://user-images.githubusercontent.com/58893102/222640855-9c57e7d4-f3ed-4ebb-ab66-1c98a0a61c57.png)
+
 
 ## Запуск
 
