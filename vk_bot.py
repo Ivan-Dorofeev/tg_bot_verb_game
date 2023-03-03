@@ -15,7 +15,7 @@ from tg_log_sender import TelegramLogsHandler
 logger = logging.getLogger("vk_bot_logger")
 
 
-def echo_text_from_users(event, vk_api, project_id):
+def get_text_and_send_answer(event, vk_api, project_id):
     text = event.text
     session_id = event.user_id
     answer = detect_intent_texts(project_id, session_id, text, 'ru')
@@ -51,7 +51,7 @@ if __name__ == "__main__":
             longpoll = VkLongPoll(vk_session)
             for event in longpoll.listen():
                 if event.type == VkEventType.MESSAGE_NEW and event.to_me:
-                    echo_text_from_users(event, vk_api, dialog_flow_project_id)
+                    get_text_and_send_answer(event, vk_api, dialog_flow_project_id)
         except ConnectionError:
             logger.warning('Ошибка соединения')
             time.sleep(60)

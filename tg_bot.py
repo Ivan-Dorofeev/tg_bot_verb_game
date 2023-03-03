@@ -20,12 +20,10 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     )
 
 
-async def echo_text_from_users(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+async def get_text_and_send_answer(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     texts = update.message.text
     session_id = update.message.id
-    print('texts = ', texts)
     answer = detect_intent_texts(dialog_flow_project_id, session_id, texts, 'ru')
-    print('answer = ', answer)
     await update.message.reply_text(answer)
 
 
@@ -47,7 +45,7 @@ def main(bot_token, my_tg_chat_id):
             application = Application.builder().token(bot_token).build()
 
             application.add_handler(CommandHandler("start", start))
-            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, echo_text_from_users))
+            application.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, get_text_and_send_answer))
 
             application.run_polling()
 

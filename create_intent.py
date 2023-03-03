@@ -29,11 +29,17 @@ def create_intent(project_id, display_name, training_phrases_parts, message_text
         request={"parent": parent, "intent": intent}
     )
 
-def create_intent_from_json(file_path):
+
+def create_intent_from_json():
     """Create intent from json-file"""
+
     load_dotenv()
     dialog_flow_project_id = os.environ['DIALOGFLOW_PROJECT_ID']
-    with open(file_path, 'r') as read_file:
+    with open('phrases/phrases.json', 'r') as read_file:
         read_phrases = json.load(read_file)
         for phrases, phrases_action in read_phrases.items():
             create_intent(dialog_flow_project_id, phrases, phrases_action['questions'], phrases_action['answer'])
+
+
+if __name__ == '__main__':
+    create_intent_from_json()
