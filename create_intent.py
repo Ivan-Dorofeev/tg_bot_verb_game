@@ -1,6 +1,7 @@
 import json
-from pprint import pprint
+import os
 
+from dotenv import load_dotenv
 from google.cloud import dialogflow
 
 
@@ -28,14 +29,11 @@ def create_intent(project_id, display_name, training_phrases_parts, message_text
         request={"parent": parent, "intent": intent}
     )
 
-    print("Intent created: {}".format(response))
-
-
-def main(file_path):
+def create_intent_from_json(file_path):
+    """Create intent from json-file"""
+    load_dotenv()
+    dialog_flow_project_id = os.environ['DIALOGFLOW_PROJECT_ID']
     with open(file_path, 'r') as read_file:
-        read_frizes = json.load(read_file)
-        for frize, frize_action in read_frizes.items():
-            create_intent('axxel123-gtnf', frize, frize_action['questions'], frize_action['answer'])
-
-
-# main('frazes/test_frazes.json')
+        read_phrases = json.load(read_file)
+        for phrases, phrases_action in read_phrases.items():
+            create_intent(dialog_flow_project_id, phrases, phrases_action['questions'], phrases_action['answer'])
