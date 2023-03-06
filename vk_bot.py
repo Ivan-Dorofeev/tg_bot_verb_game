@@ -39,7 +39,7 @@ if __name__ == "__main__":
     tg_log_sender = TelegramLogsHandler(tg_bot, my_tg_chat_id)
     logger.addHandler(tg_log_sender)
 
-    handler = RotatingFileHandler('v_bot_log.log', maxBytes=5000000, backupCount=0)
+    handler = RotatingFileHandler('vk_bot_log.log', maxBytes=5000000, backupCount=0)
     logger.addHandler(handler)
 
     logger.warning('VK Бот запущен')
