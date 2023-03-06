@@ -25,7 +25,8 @@ async def get_text_and_send_answer(update: Update, context: ContextTypes.DEFAULT
     session_id = update.message.id
     answer = detect_intent_texts(project_id=dialog_flow_project_id, session_id=session_id, text=texts,
                                  language_code='ru')
-    await update.message.reply_text(answer)
+    if not answer.intent.is_fallback:
+        await update.message.reply_text(answer.fulfillment_text)
 
 
 def run_bot(bot_token, my_tg_chat_id, dialog_flow_project_id):

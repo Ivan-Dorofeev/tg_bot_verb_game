@@ -18,7 +18,7 @@ logger = logging.getLogger("vk_bot_logger")
 def get_text_and_send_answer(event, vk_api, project_id):
     text = event.text
     session_id = event.user_id
-    answer = detect_intent_texts(project_id, session_id, text, 'ru')
+    answer = detect_intent_texts(project_id, session_id, text, 'ru').fulfillment_text
     vk_api.messages.send(
         user_id=event.user_id,
         message=answer,
